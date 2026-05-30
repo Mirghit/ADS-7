@@ -38,7 +38,7 @@ int main() {
     lengths.push_back(i);
   }
   std::cout << "i, lights off, lights on, chaotic lights\n";
-  for(size_t i = 0; i < lengths.size(); ++i) {
+  for (size_t i = 0; i < lengths.size(); ++i) {
     std::cout << lengths[i] << ','
       << lightsOff[i] << ','
       << lightsOn[i] << ','
