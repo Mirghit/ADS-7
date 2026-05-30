@@ -24,14 +24,19 @@ void Train::addCar(bool light) {
 int Train::getLength() {
   if (first == nullptr) return 0;
   Car *curr = first;
+  do {
+    curr->light = false;
+    curr = curr->next;
+    ++countOp;
+  } while (curr != first);
   first->light = true;
+  curr = first;
   int move = 0;
   while (true) {
     curr = curr->next;
     ++countOp;
     ++move;
     if (curr->light) break;
-    else curr ->light = false;
   }
   return move;
 }
