@@ -31,14 +31,15 @@ int Train::getLength() {
       curr = curr->next;
       move++;
       countOp++;
-  } while (!curr->light);
-  curr->light = false;
-  for (int i = 0; i < move; i++) {
+    } while (!curr->light);
+    curr->light = false;
+    for (int i = 0; i < move; i++) {
     curr = curr->prev;
     countOp++;
-  }
-  if (!curr->light) {
+    }
+    if (!curr->light) {
     return move;
+    }
   }
 }
 
